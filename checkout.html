@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout — VÉNARO</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css">
+
+</head>
+
+
+<body class="checkout-page">
+
+    <div class="checkout-page-wrapper">
+
+    </div>
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <a
+            href="index.html"
+            class="logo">
+
+            VÉNARO
+
+        </a>
+
+
+        <nav class="navbar">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <a href="wishlist.html">
+                Wishlist
+            </a>
+
+            <a href="cart.html">
+                Bag
+            </a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <a
+                href="cart.html"
+                class="cart-btn">
+
+                BAG
+
+                <span id="cartCount">
+                    0
+                </span>
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- CHECKOUT -->
+
+    <main class="checkout-container">
+
+
+        <section class="checkout-heading">
+
+            <p>
+                VÉNARO / CHECKOUT
+            </p>
+
+            <h1>
+
+                COMPLETE
+                <span>ORDER.</span>
+
+            </h1>
+
+        </section>
+
+
+
+        <div class="checkout-layout">
+
+
+            <!-- CUSTOMER INFORMATION -->
+
+            <section class="checkout-form">
+
+                <div class="checkout-section-title">
+
+                    <span>
+                        01
+                    </span>
+
+                    <h2>
+                        CUSTOMER INFORMATION
+                    </h2>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            FIRST NAME
+                        </label>
+
+                        <input
+                            type="text"
+                            id="firstName"
+                            placeholder="Adham">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            LAST NAME
+                        </label>
+
+                        <input
+                            type="text"
+                            id="lastName"
+                            placeholder="Hamo">
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        EMAIL ADDRESS
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="you@example.com">
+
+                </div>
+
+
+                <div class="form-group">
+
+    <label for="phone">
+        PHONE NUMBER
+    </label>
+
+    <input
+        type="text"
+        id="phone"
+        name="phone"
+        placeholder="Enter your phone number"
+        style="
+            pointer-events: auto !important;
+            user-select: text !important;
+            position: relative;
+            z-index: 9999;
+        ">
+
+</div>
+
+
+
+                <!-- SHIPPING -->
+
+                <div class="checkout-section-title">
+
+                    <span>
+                        02
+                    </span>
+
+                    <h2>
+                        SHIPPING ADDRESS
+                    </h2>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        ADDRESS
+                    </label>
+
+                    <input
+                        type="text"
+                        id="address"
+                        placeholder="Street address">
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            CITY
+                        </label>
+
+                        <input
+                            type="text"
+                            id="city"
+                            placeholder="Cairo">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            POSTAL CODE
+                        </label>
+
+                        <input
+                            type="text"
+                            id="postalCode"
+                            placeholder="00000">
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PAYMENT -->
+
+                <div class="checkout-section-title">
+
+                    <span>
+                        03
+                    </span>
+
+                    <h2>
+                        PAYMENT
+                    </h2>
+
+                </div>
+
+
+                <div class="payment-method">
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="cash"
+                            checked>
+
+                        <span>
+                            CASH ON DELIVERY
+                        </span>
+
+                    </label>
+
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="card">
+
+                        <span>
+                            CARD PAYMENT
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <button
+                    class="place-order-btn"
+                    id="placeOrderBtn">
+
+                    PLACE ORDER
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+            </section>
+
+
+
+            <!-- ORDER SUMMARY -->
+
+            <aside class="checkout-summary">
+
+                <p class="summary-label">
+                    YOUR ORDER
+                </p>
+
+
+                <div
+                    id="checkoutItems"
+                    class="checkout-items">
+
+                </div>
+
+
+                <div class="checkout-summary-line">
+
+                    <span>
+                        SUBTOTAL
+                    </span>
+
+                    <strong id="checkoutSubtotal">
+                        $0.00
+                    </strong>
+
+                </div>
+
+
+                <div class="checkout-summary-line">
+
+                    <span>
+                        SHIPPING
+                    </span>
+
+                    <strong>
+                        FREE
+                    </strong>
+
+                </div>
+
+
+                <div class="checkout-total">
+
+                    <span>
+                        TOTAL
+                    </span>
+
+                    <strong id="checkoutTotal">
+                        $0.00
+                    </strong>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+
+    <script
+        src="js/checkout.js"></script>
+
+</body>
+
+</html>

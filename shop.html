@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop — VÉNARO</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body class="shop-page">
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            VÉNARO
+        </a>
+
+        <a
+    href="wishlist.html"
+    class="wishlist-header-btn"
+    id="wishlistBtn">
+
+    ♡
+
+    <span id="wishlistCount">
+        0
+    </span>
+
+</a>
+
+
+        <nav class="navbar">
+
+            <a href="index.html">Home</a>
+
+            <a href="shop.html" class="active">
+                Shop
+            </a>
+
+            <a href="./collections.html">Collections</a>
+
+            <a href="./about.html">About</a>
+
+            <a href="./contact.html">Contact</a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <button class="icon-btn" id="searchBtn">
+                ⌕
+            </button>
+
+            <button class="icon-btn" id="wishlistBtn">
+                ♡
+            </button>
+
+            <a href="cart.html" class="cart-btn" id="cartBtn">
+    BAG
+    <span id="cartCount">0</span>
+</a>
+
+        </div>
+
+    </header>
+
+    <!-- ================= SHOP ================= -->
+
+    <main class="shop-container">
+
+
+        <!-- TOP BAR -->
+
+        <div class="shop-top">
+
+            <div class="categories">
+
+                <button
+                    class="category-btn active"
+                    data-category="all">
+
+                    ALL
+
+                </button>
+
+
+                <button
+                    class="category-btn"
+                    data-category="men">
+
+                    MEN
+
+                </button>
+
+
+                <button
+                    class="category-btn"
+                    data-category="women">
+
+                    WOMEN
+
+                </button>
+
+
+                <button
+                    class="category-btn"
+                    data-category="accessories">
+
+                    ACCESSORIES
+
+                </button>
+
+            </div>
+
+
+
+            <div class="shop-tools">
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="productSearch"
+                        placeholder="Search products...">
+
+                    <span>⌕</span>
+
+                </div>
+
+
+                <select id="sortProducts">
+
+                    <option value="default">
+                        Sort By
+                    </option>
+
+                    <option value="low">
+                        Price: Low to High
+                    </option>
+
+                    <option value="high">
+                        Price: High to Low
+                    </option>
+
+                    <option value="name">
+                        Name
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT COUNT -->
+
+        <div class="products-header">
+
+            <span id="productCount">
+                0 PRODUCTS
+            </span>
+
+        </div>
+
+
+
+        <!-- PRODUCTS -->
+
+        <section
+            class="products-grid"
+            id="productsGrid">
+
+        </section>
+
+
+    </main>
+
+<!-- ================= QUICK VIEW MODAL ================= -->
+
+<div class="quick-modal" id="quickModal">
+
+    <div class="quick-modal-overlay" id="modalOverlay"></div>
+
+    <div class="quick-modal-content">
+
+        <button class="modal-close" id="modalClose">
+            ×
+        </button>
+
+        <div class="modal-image">
+
+            <img id="modalImage" src="" alt="Product">
+
+        </div>
+
+        <div class="modal-details">
+
+            <p class="modal-category" id="modalCategory">
+                CATEGORY
+            </p>
+
+            <h2 id="modalName">
+                PRODUCT NAME
+            </h2>
+
+            <p class="modal-price" id="modalPrice">
+                $0
+            </p>
+
+            <p class="modal-description">
+                A premium VÉNARO piece designed with
+                modern details and an effortless silhouette.
+            </p>
+
+
+            <!-- SIZE -->
+
+            <div class="option-group">
+
+                <p>SELECT SIZE</p>
+
+                <div class="size-options">
+
+                    <button class="size-btn">S</button>
+                    <button class="size-btn active">M</button>
+                    <button class="size-btn">L</button>
+                    <button class="size-btn">XL</button>
+
+                </div>
+
+            </div>
+
+
+            <!-- COLOR -->
+
+            <div class="option-group">
+
+                <p>SELECT COLOR</p>
+
+                <div class="color-options">
+
+                    <button
+                        class="color-btn black active"
+                        aria-label="Black">
+                    </button>
+
+                    <button
+                        class="color-btn white"
+                        aria-label="White">
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUANTITY -->
+
+            <div class="quantity-area">
+
+                <p>QUANTITY</p>
+
+                <div class="quantity">
+
+                    <button id="minusQty">
+                        −
+                    </button>
+
+                    <span id="quantityValue">
+                        1
+                    </span>
+
+                    <button id="plusQty">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACTIONS -->
+
+            <div class="modal-actions">
+
+                <button
+                    class="modal-wishlist"
+                    id="modalWishlist">
+
+                    ♡
+
+                </button>
+
+                <button
+                    class="modal-add"
+                    id="modalAdd">
+
+                    ADD TO BAG
+
+                    <span>→</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <script src="js/products.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script src="js/shop.js"></script>
+
+
+</body>
+
+</html>
